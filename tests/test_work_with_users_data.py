@@ -32,7 +32,8 @@ def test_create_user():
         assert user_job == response.json()['job']
 
 #тянем тело из json файла
-json_file = open('./users_credentials.json')
+
+json_file = open('users_credentials.json')
 users_credentials = json.load(json_file)
 @pytest.mark.parametrize("users_credentials",users_credentials)
 @allure.suite('Проверка запросов с выполнением работ по юзерам')
