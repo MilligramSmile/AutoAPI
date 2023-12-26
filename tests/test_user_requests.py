@@ -43,3 +43,4 @@ def test_user_not_found():
         response = httpx.get(BASE_URL + '/23')
     with allure.step('Проверяем код ответа'):
         assert response.status_code == 404
+
